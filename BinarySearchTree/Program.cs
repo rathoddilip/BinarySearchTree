@@ -23,6 +23,8 @@ namespace BinarySearchTree
             binarySearchTree.Insert(63);
             binarySearchTree.Insert(67);
             binarySearchTree.Display();
+            Console.WriteLine("------------------------");
+            binarySearchTree.IfExists(63, binarySearchTree);
             Console.ReadLine();
         }
     }

@@ -64,6 +64,31 @@ namespace BinarySearchTree
                 this.RightTree.Display();
             }
         }
-
+        public bool IfExists(T element, BinarySearchTree<T> node)
+        {
+            bool result = false;
+            if (node == null)
+            {
+                return false;
+            }
+            if (node.NodeData.Equals(element))
+            {
+                Console.WriteLine("Found the element in BST :" + node.NodeData);
+                result = true;
+            }
+            else
+            {
+                Console.WriteLine("Current element in BST is :" + node.NodeData);
+            }
+            if (element.CompareTo(node.NodeData) < 0)
+            {
+                IfExists(element, node.LeftTree);
+            }
+            if (element.CompareTo(node.NodeData) > 0)
+            {
+                IfExists(element, node.RightTree);
+            }
+            return result;
+        }
     }
 }
