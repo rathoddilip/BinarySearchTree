@@ -48,6 +48,10 @@ namespace BinarySearchTree
                 this.rightCount++;
             }
         }
+        public void GetSize()
+        {
+            Console.WriteLine("Size :" + (this.leftCount + this.rightCount));
+        }
         public void Display()
         {
             if (this.LeftTree != null)
